@@ -30,6 +30,8 @@
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:hint="Title Food"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/item_image"
             android:textSize="20sp" />
@@ -37,7 +39,9 @@
         <TextView
             android:id="@+id/item_detail"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
+            android:hint="Quantity of Food"
             android:layout_below="@+id/item_title"
             android:layout_toRightOf="@+id/item_image" />
 
@@ -46,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Accept"
-            android:background="#5ef5d2"
+            android:background="#f9a1a1"
             android:layout_below="@+id/item_detail"
             android:layout_toRightOf="@+id/item_image"
             android:layout_toEndOf="@+id/item_image" />
@@ -55,8 +59,8 @@
             android:id="@+id/btnReject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#f9a1a1"
             android:text="Reject"
-            android:background="#5ef5d2"
             android:layout_alignBaseline="@+id/btnAccept"
             android:layout_alignBottom="@+id/btnAccept"
             android:layout_alignParentRight="true"
