@@ -65,17 +65,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int Position) {
-         CardDemoModel cardemomodel = cardemoArraylist.get(Position);
+         final CardDemoModel cardemomodel = cardemoArraylist.get(Position);
         viewHolder.itemTitle.setText(cardemomodel.getTitles()[Position]);
         viewHolder.itemDetail.setText(cardemomodel.getDetails()[Position]);
         Picasso.with(context).load(cardemomodel.getImageUrl()[Position]).into(viewHolder.itemImage);
         viewHolder.btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.e("Mytag","cardemomodel.getTitles()"+cardemomodel.getTitles()[Position]);
                 Intent intent = new Intent(context,NotifyFoodCookingActivity.class);
-              //  intent.putExtra("title",cardemomodel.getTitles()[Position]);
-                //intent.putExtra("itemDetail",cardemomodel.getDetails()[Position]);
-                //intent.putExtra("image",cardemomodel.getTitles()[Position]);
+               intent.putExtra("title",cardemomodel.getTitles()[Position]);
+               intent.putExtra("itemDetail",cardemomodel.getDetails()[Position]);
+               intent.putExtra("image",cardemomodel.getImageUrl()[Position]);
                 context.startActivity(intent);
             }
         });

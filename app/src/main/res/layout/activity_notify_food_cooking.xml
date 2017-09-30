@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context="com.delaroystudios.carddemo.NotifyFoodCookingActivity">
 <ImageView
-    android:layout_gravity="center"
+android:layout_gravity="center"
     android:id="@+id/OrderItemImage"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
  />
 
     <TextView
@@ -18,12 +18,14 @@
         android:textSize="30dip"
         android:textStyle="bold"
         android:layout_gravity="center"
+        android:text="Girish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/quantityFood"
         android:textSize="20dip"
         android:textStyle="bold"
+        android:text="Singh"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
