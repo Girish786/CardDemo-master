@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -54,14 +55,24 @@ public class CardDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_demo);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         recyclerView =
                 (RecyclerView) findViewById(R.id.recycler_view);
-arrayList= new ArrayList<>();
+        arrayList= new ArrayList<>();
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        CardDemoModel cardDemoModel = new CardDemoModel(titles,details,images);
+        for(int i=0;i<titles.length;i++)
+        {
+            Log.e("Mytag","titlesize"+titles.length);
+            CardDemoModel cardDemoModel = new CardDemoModel(titles,details,images);
+            arrayList.add(cardDemoModel);
+        }
 
-        arrayList.add(cardDemoModel);
         adapter = new RecyclerAdapter(CardDemoActivity.this,arrayList);
         recyclerView.setAdapter(adapter);
     }
