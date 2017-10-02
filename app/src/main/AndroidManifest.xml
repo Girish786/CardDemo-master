@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NotifyFoodCookingActivity"></activity>
+        <activity android:name=".NotifyFoodCookingActivity" />
+        <activity android:name=".Chef_main" />
+        <activity android:name=".Profile_chef"></activity>
     </application>
 
 </manifest>
